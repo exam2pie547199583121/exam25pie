@@ -37,6 +37,7 @@ except (FileNotFoundError, KeyError, ValidationError) as e:
 #         data = request.get_json()
 #         y = data.get("y", y)
 #         return jsonify(message="OK"), 200
+#  Обработка исключения
 #     except Exception as e:
 #         return jsonify(message=f"NOT OK {e}"), 400
 
@@ -56,5 +57,6 @@ def get_result():
 
 if __name__ == "__main__":
     app.run(port=20000, debug=True)
+
 
 
