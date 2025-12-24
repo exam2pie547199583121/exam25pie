@@ -15,6 +15,7 @@ rez = 0
 #     lastname: str
 
 json_path = sys.argv[1]
+skey = sys.argv[2]
 
 try:
     with open(json_path, 'r', encoding='utf-8') as f:
@@ -29,7 +30,7 @@ except (FileNotFoundError, KeyError, ValidationError) as e:
     print(f"Ошибка загрузки данных из JSON: {e}")
     sys.exit(1)
 
-# @app.route("/patchAlfa", methods=["PATCH"])
+# @app.route("/patchAlfa", methods=["POST"])
 # def update_y():
 #     global y
 #     try:
@@ -55,3 +56,4 @@ def get_result():
 
 if __name__ == "__main__":
     app.run(port=20000, debug=True)
+
