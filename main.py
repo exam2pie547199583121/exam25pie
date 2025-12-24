@@ -30,7 +30,7 @@ except (FileNotFoundError, KeyError, ValidationError) as e:
     print(f"Ошибка загрузки данных из JSON: {e}")
     sys.exit(1)
 
-# @app.route("/patchAlfa", methods=["POST"])
+# @app.route("/patchAlfa", methods=["PATCH"])
 # def update_y():
 #     global y
 #     try:
@@ -56,4 +56,5 @@ def get_result():
 
 if __name__ == "__main__":
     app.run(port=20000, debug=True)
+
 
